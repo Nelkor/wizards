@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "ts": "tsc --noemit",
+    "lint": "eslint . --ext .ts --fix",
+    "format": "prettier **/*.json .*rc --write",
+    "build": "webpack && ts-node dev-helpers/create-package.ts",
+    "start": "node dist"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.29"
+  }
+}

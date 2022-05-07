@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "ts": "tsc --noemit",
+    "lint": "eslint . --ext .ts,.vue --fix",
+    "format": "prettier **/*.json .*rc **/*.scss --write",
+    "build": "webpack",
+    "serve": "webpack serve"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.2.33",
+    "@vue/eslint-config-typescript": "^10.0.0",
+    "copy-webpack-plugin": "^10.2.4",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "sass": "^1.51.0",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.3.0",
+    "vue-loader": "^17.0.0",
+    "webpack-dev-server": "^4.8.1"
+  },
+  "dependencies": {
+    "vue": "^3.2.33",
+    "vue-router": "^4.0.15"
+  }
+}

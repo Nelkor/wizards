@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "front-build": "npm run build --prefix client/front",
+    "bff-build": "npm run build --prefix client/bff",
+    "front": "npm run serve --prefix client/front",
+    "bff": "npm start --prefix client/bff"
+  }
+}
