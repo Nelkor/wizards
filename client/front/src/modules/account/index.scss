@@ -1,0 +1,71 @@
+@import "./style/enter";
+
+.account-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+
+  .explanation {
+    font-size: 14px;
+  }
+
+  label {
+    display: flex;
+
+    &.text {
+      flex-direction: column;
+    }
+
+    &.checkbox {
+      align-items: center;
+      margin-bottom: 8px;
+      width: fit-content;
+
+      span {
+        font-size: 14px;
+        padding: 0 6px;
+      }
+    }
+
+    &.disabled {
+      pointer-events: none;
+      opacity: .4;
+    }
+  }
+
+  .notification {
+    font-size: 14px;
+    padding-top: 8px;
+    margin: 0;
+    min-height: 16px;
+
+    &.success {
+      color: green;
+      background-color: #efe;
+    }
+
+    &.error {
+      color: red;
+      background-color: #fee;
+    }
+  }
+
+  input.text {
+    height: 32px;
+    padding: 0 8px;
+  }
+
+  input[type="checkbox"] {
+    margin: 0;
+  }
+
+  button {
+    height: 32px;
+    max-width: 200px;
+    margin-top: 16px;
+  }
+
+  .alternative {
+    margin: 32px 0;
+  }
+}

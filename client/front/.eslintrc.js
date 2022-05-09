@@ -27,6 +27,7 @@ config.rules = {
   'vue/order-in-components': 2,
   'vue/no-empty-component-block': 2,
   'vue/max-attributes-per-line': 0,
+  'vue/singleline-html-element-content-newline': 0,
 }
 
 module.exports = config

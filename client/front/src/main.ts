@@ -1,3 +1,5 @@
+import '@/helpers/index.scss'
+
 import { createApp } from 'vue'
 
 import { loadCurrentLang } from '@/i18n'

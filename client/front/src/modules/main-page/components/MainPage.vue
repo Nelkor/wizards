@@ -1,7 +1,11 @@
 <script lang="ts" setup>
-import { $T } from '@/i18n'
+import { isUserAuthorized } from '@/account'
+
+import PageForUnauthorized from './PageForUnauthorized.vue'
+import PageForAuthorized from './PageForAuthorized.vue'
 </script>
 
 <template>
-  <h1>{{ $T('hello') }}</h1>
+  <PageForAuthorized v-if="isUserAuthorized" />
+  <PageForUnauthorized v-else />
 </template>

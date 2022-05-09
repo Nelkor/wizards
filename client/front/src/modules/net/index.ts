@@ -1,18 +1,27 @@
 import { ResponseJson } from './types'
 
 export const getRawJson = async (path: string) => {
-  const res = await fetch(path)
+  try {
+    const res = await fetch(path)
 
-  return res.json()
+    return res.json()
+  } catch (e) {
+    return {}
+  }
 }
 
-export const get = async (path: string) => {
-  const res = await fetch(path)
-  const json: ResponseJson = await res.json()
+export const getJson = async <T>(path: string): Promise<ResponseJson> => {
+  const json = await getRawJson(path)
 
-  if (!json.ok) {
-    throw new Error(`get-request has failed: ${json.reason}`)
+  if (json.ok) {
+    return {
+      ok: true,
+      result: json.result as T,
+    }
   }
 
-  return json.result
+  return {
+    ok: false,
+    reason: json.reason || 'net',
+  }
 }

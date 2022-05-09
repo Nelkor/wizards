@@ -2,8 +2,10 @@
   "private": true,
   "scripts": {
     "front-build": "npm run build --prefix client/front",
+    "front-lint": "npm run lint --prefix client/front",
     "bff-build": "npm run build --prefix client/bff",
     "front": "npm run serve --prefix client/front",
+    "front-test": "npm t --prefix client/front",
     "bff": "npm start --prefix client/bff"
   }
 }
